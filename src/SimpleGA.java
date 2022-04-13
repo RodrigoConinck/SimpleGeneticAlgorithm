@@ -18,10 +18,10 @@ public class SimpleGA {
         //Calculate fitness of each individual
         demo.population.calculateFitness();
 
-        System.out.println("Generation: " + demo.generationCount + " Fittest: " + demo.population.fittest);
+        System.out.println("Generation: " + demo.generationCount + " Fittest: " + demo.population.fittest );
 
         //While population gets an individual with maximum fitness
-        while (demo.population.fittest < 5) {
+        while (demo.population.fittest < 90) {
             ++demo.generationCount;
 
             //Do selection
@@ -48,8 +48,9 @@ public class SimpleGA {
         System.out.println("Fitness: "+demo.population.getFittest().fitness);
         System.out.print("Genes: ");
         for (int i = 0; i < 5; i++) {
-            System.out.print(demo.population.getFittest().genes[i]);
+            System.out.println(demo.population.getFittest().genes[i]);
         }
+        System.out.println(demo.fittest);
 
         System.out.println("");
 
